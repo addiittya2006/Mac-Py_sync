@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<% load staticfiles %>
+<html>
+
+    <head>
+        <title>Pango App</title>
+    </head>
+
+    <body>
+        <h1>Pango says...</h1>
+        hello! <strong>{{ boldtext }}</strong><br />
+        <a href="/pango/about/">About</a><br />
+        <img src="{% static "images/Profile.jpg" %}" alt="MyProfile" />
+        <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+    </body>
+
+</html>

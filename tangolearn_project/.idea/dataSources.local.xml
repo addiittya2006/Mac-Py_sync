@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="c58edf1a-4d06-4e89-9504-345a25ab7394">
+      <user-name>admin</user-name>
+      <user-password>dfcbdfcedfc3dfdedfd3dfcb</user-password>
+      <schema-pattern>django_test.*</schema-pattern>
+      <default-schemas>django_test.*</default-schemas>
+    </data-source>
+  </component>
+</project>
