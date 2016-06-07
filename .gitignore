@@ -80,5 +80,6 @@ crashlytics.properties
 crashlytics-build.properties
 
 # Add more Folders
-Py
-Exercise Files
+/exec/
+/Exercise\ Files/
+/Working/
